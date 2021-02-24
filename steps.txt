@@ -1,0 +1,109 @@
+*** MetaMask - https://metamask.io:
+
+* Firefox Win:
+Account1: 0x38dd98cdd038653a672B88B5a11a467882376936
+
+
+* Chrome:
+chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html
+
+
+
+Account 01 = ctacc01
+0x3873dEaA1E8278f89FfB12F2aC28f3682079F1c3
+https://ropsten.etherscan.io/address/0x3873deaa1e8278f89ffb12f2ac28f3682079f1c3
+
+Account 02 = cvtacc02
+0xe53429EBB0239065b4e2Ffb58F2e794D6E568C77
+https://ropsten.etherscan.io/address/0xe53429ebb0239065b4e2ffb58f2e794d6e568c77
+https://rinkeby.etherscan.io/address/0xe53429ebb0239065b4e2ffb58f2e794d6e568c77
+
+Privacy: 0215e0ce9941b93aedc1df78e5907c807ec4107cc55d79b3a0d25da0a0796ec5
+0215e0ce9941b93aedc1df78e5907c807ec4107cc55d79b3a0d25da0a0796ec5
+
+
+Ropsten Test Net - 8 ETH
+Rinkeby Test Net - 3.99 ETH
+
+
+
+* Firefox:
+
+AccountFirefoxCT01
+0xf0022969D3681449BcC831905f20581080f3483b
+
+https://ropsten.etherscan.io/address/0xf0022969d3681449bcc831905f20581080f3483b
+
+
+https://etherscan.io/
+https://ropsten.etherscan.io/
+
+
+* Connect Metamax wallet to this site
+https://remix.ethereum.org/
+
+https://github.com/ethereumbook/ethereumbook/
+https://github.com/ethereumbook/ethereumbook/blob/develop/code/Solidity/Faucet.sol
+
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity >=0.7.0 <0.8.0;
+
+// Our first contract is a faucet!
+contract Faucet {
+    // Accept any incoming amount
+    receive () external payable {}
+    
+    // Give out ether to anyone who asks
+    function withdraw(uint withdraw_amount) public {
+
+        // Limit withdrawal amount
+        require(withdraw_amount <= 100000000000000000);
+
+        // Send the amount to the address that requested it
+        msg.sender.transfer(withdraw_amount);
+    }
+}
+
+https://ropsten.etherscan.io/tx/0xf6f869e0a67e829973be86650f09a5ce72146525a42c5b8d8dff8902aca6b1ef
+Faucet MacOS Firefox @: 0x501507CdC588dc181bd385121d396abF2F846094
+"100000000000000000"
+
+
+withdraw_faucet.js in Remix Online IDE:
+
+(async () => {
+    try {
+// a random address to send the tokens to
+        const  CONTRACT_ADDR = '0x501507CdC588dc181bd385121d396abF2F846094'
+        
+        console.log('start')
+        
+        const metadata = JSON.parse(await remix.call('fileManager', 'getFile', 'browser/contracts/artifacts/Faucet.json'))
+        
+        // get the provider from metamask
+        const provider = (new ethers.providers.Web3Provider(web3Provider))
+        const signer = provider.getSigner()
+let contract = new ethers.Contract(CONTRACT_ADDR, metadata.abi, signer);
+txn = await contract.withdraw("100000000000000000")
+        await txn.wait()
+        console.log('finished')
+}catch (e) {
+        console.log(e.message)
+    }
+})()
+
+
+Ballout:
+["0x616c696365000000000000000000000000000000000000000000000000000000","0x626f620000000000000000000000000000000000000000000000000000000000"]
+
+https://ropsten.etherscan.io/tx/0x1f2b65751d8c5b867f3f4882c92368cee43f0434ebef5601b045f1cd3f279235
+
+Ballout Contract address: 0x0b170d1a194bca45762f1d10ca763264f79e964c
+
+
+Chairperson address: 0xf0022969D3681449BcC831905f20581080f3483b
+
+In another metamask remix window for this contract choose for field vote uint256 index of the candidate 1 
+Then click on the winnerName
+--------------------------------------
