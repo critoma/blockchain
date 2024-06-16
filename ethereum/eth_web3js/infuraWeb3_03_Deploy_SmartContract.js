@@ -18,14 +18,14 @@ async function main() {
   const network = "sepolia"; // process.env.ETHEREUM_NETWORK;
   const web3 = new Web3(
       new Web3.providers.HttpProvider(
-        "https://sepolia.infura.io/v3/58238a3ee8aa4e27931f16cc886aad39",
+        "https://sepolia.infura.io/v3/5823...ad39",
         //`https://${network}.infura.io/v3/${process.env.INFURA_API_KEY}`,
       ),
   );
 
   // Creating a signing account from a private key
   const signer = web3.eth.accounts.privateKeyToAccount(
-    '0xb08ff6820178c5b900f86dc995332d51eed31a887e9d997bf1feab357a171bd0',
+    '0xb08f...1bd0',
     // '0x' + process.env.SIGNER_PRIVATE_KEY,
   );
   web3.eth.accounts.wallet.add(signer);
