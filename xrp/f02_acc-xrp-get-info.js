@@ -37,7 +37,7 @@ const api = new RippleAPI({
 //const api = new RippleAPI({server: 'wss://s.devnet.rippletest.net'}) //:51233 DEVNET
 
   //const myAddress = 'rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn'; // DEMO - not mine
-  const myAddress = 'rJmMuvTUMgGwzCwgufVgkDXNVP5pQu4Xnc'; // MY Real ADDRESS in Kraken
+  const myAddress = 'rJmMuvTUMgGwzCwgufVgkDXNVP5pQu4Xnc';   // Real XRP ADDRESS
   // const myAddress = 'rLeDvLQRFeMnjVFHQP9Zvdy38gz46iubaT'; // My TEST Net 1
   //const myAddress = 'rwBjn3CL3iAyz68Y8F5UQ9Dbwaob5HMS8x'; // My TEST Net 2
   
