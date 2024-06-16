@@ -15,7 +15,7 @@ async function main() {
   const network = "sepolia"; // process.env.ETHEREUM_NETWORK;
   const web3 = new Web3(
     new Web3.providers.HttpProvider(
-      "https://sepolia.infura.io/v3/58238a3ee8aa4e27931f16cc886aad39",
+      "https://sepolia.infura.io/v3/5823...ad39",
       //`https://${network}.infura.io/v3/${process.env.INFURA_API_KEY}`,
     ),
   );
@@ -24,14 +24,14 @@ async function main() {
   const account1 = '0x3873dEaA1E8278f89FfB12F2aC28f3682079F1c3' // Your account address 1
   const account2 = '0xe53429EBB0239065b4e2Ffb58F2e794D6E568C77' // Your account address 2
   /////const account2 = '0x50F08cb83D03DD43c7F8Eb9e8bc9A70259Ac94c8' // Your account address 2
-  const privateKey1 = Buffer.from('b08ff6820178c5b900f86dc995332d51eed31a887e9d997bf1feab357a171bd0', 'hex')
-  //const privateKey2 = Buffer.from('0215e0ce9941b93aedc1df78e5907c807ec4107cc55d79b3a0d25da0a0796ec5', 'hex')
+  const privateKey1 = Buffer.from('b08f...1bd0', 'hex')
+  //const privateKey2 = Buffer.from('021...ec5', 'hex')
   */
 
   // Creating a signing account from a private key
   const signer = web3.eth.accounts.privateKeyToAccount(
     // process.env.SIGNER_PRIVATE_KEY,
-    "0xb08ff6820178c5b900f86dc995332d51eed31a887e9d997bf1feab357a171bd0",
+    "0xb08f...1bd0",
   );
   web3.eth.accounts.wallet.add(signer);
   await web3.eth
