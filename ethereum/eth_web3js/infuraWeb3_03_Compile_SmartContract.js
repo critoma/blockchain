@@ -8,11 +8,16 @@ const solc = require("solc");
 async function main() {
   // Load the contract source code
   const sourceCode = await fs.readFile("Faucet.sol", "utf8");
+  // const sourceCode = await fs.readFile("Storage.sol", "utf8");
+  
   // Compile the source code and retrieve the ABI and Bytecode
   const { abi, bytecode } = compile(sourceCode, "Faucet");
+  // const { abi, bytecode } = compile(sourceCode, "Storage");
+  
   // Store the ABI and Bytecode into a JSON file
   const artifact = JSON.stringify({ abi, bytecode }, null, 2);
   await fs.writeFile("Faucet.json", artifact);
+  // await fs.writeFile("Storage.json", artifact);
 }
 
 function compile(sourceCode, contractName) {
