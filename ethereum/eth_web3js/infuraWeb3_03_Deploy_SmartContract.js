@@ -12,6 +12,7 @@ const { ETH_DATA_FORMAT, DEFAULT_RETURN_FORMAT } = require("web3");
 // (the results of a previous compilation step)
 const fs = require("fs");
 const { abi, bytecode } = JSON.parse(fs.readFileSync("Faucet.json"));
+// const { abi, bytecode } = JSON.parse(fs.readFileSync("Storage.json"));
 
 async function main() {
   // Configuring the connection to an Ethereum node
@@ -55,6 +56,10 @@ async function main() {
 https://sepolia.etherscan.io/tx/0x49e90cffdfb42cce11da9412f18c037cf73904c3926a72fccbc81dc09bbc1e01
 Contract deployed at 0x0bD278554636bD8b0A9ea7CA5fa906D599e43Dc9
 Eventually Add FAUCET_CONTRACT to the.env file to store the contract address: 0x0bD278554636bD8b0A9ea7CA5fa906D599e43Dc9
+
+https://sepolia.etherscan.io/tx/0x4d060fe5bf3f4ad70093dd8c25c300e2064b1ac649adb3e6da5f4556e6ebaeea
+Contract deployed at 0xd07b867f560c20e3aE2bacd67C1140D33dFEe780
+Eventually Add STORAGE_CONTRACT to the.env file to store the contract address: 0xd07b867f560c20e3aE2bacd67C1140D33dFEe780
 */
 
 main();
