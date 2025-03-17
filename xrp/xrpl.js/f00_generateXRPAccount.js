@@ -1,3 +1,4 @@
+// npm i xrpl@4.2.0
 const xrpl = require("xrpl")
 
 // Wrap code in an async function so we can use await
