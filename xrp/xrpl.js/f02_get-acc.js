@@ -40,6 +40,28 @@ async function main() {
 
     // const xrpAddress = "rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh"; // Kraken is shared accounts
 
+    // https://xrpl.org/docs/references/http-websocket-apis/public-api-methods/account-methods/account_info
+    /*
+    Web-ocket:
+    {
+        "id": 2,
+        "command": "account_info",
+        "account": "rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn",
+        "ledger_index": "current",
+        "queue": true
+    }
+    JSON-RPC:
+    {
+        "method": "account_info",
+        "params": [
+            {
+                "account": "rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn",
+                "ledger_index": "current",
+                "queue": true
+            }
+        ]
+    }
+    */
     // Get info from the ledger about the address we just funded
     const response1 = await client.request({
         "command": "account_info",
