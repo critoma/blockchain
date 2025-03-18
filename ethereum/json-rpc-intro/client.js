@@ -1,8 +1,8 @@
 // https://www.npmjs.com/package/json-rpc-2.0
 // npm install json-rpc-2.0 express
 /*
-secitc@cloudshell:~/blockchain/json-rpc$ npm ls
-json-rpc@ /home/secitc/blockchain/json-rpc
+ism_ase_ro@cloudshell:~/blockchain/json-rpc$ npm ls
+json-rpc@ /home/ism_ase_ro/blockchain/json-rpc
 ├── express@4.21.2
 └── json-rpc-2.0@1.7.0
 */
@@ -39,3 +39,7 @@ client
 // Use client.notify to make a JSON-RPC notification call.
 // By definition, JSON-RPC notification does not respond.
 client.notify("log", { message: "Hello, World!" });
+
+client
+  .request("xorArrays", { arr1: [1, 2, 3], arr2: [3, 2, 1] })
+  .then((result) => console.log(result));
